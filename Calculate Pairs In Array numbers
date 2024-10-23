@@ -1,0 +1,23 @@
+import java.util.*;
+public class PairsInArray {
+public static void pairArray(int numbers[]){
+  int TP = 0;
+for(int i=0;i<numbers.length;i++){
+  int curr = numbers[i];
+  for(int j=i+1;j<numbers.length;j++){
+    System.out.print("(" + curr +"," + numbers[j] + ")");
+    TP++;
+  }
+  System.out.println();
+}
+System.out.println("Total pairs number = " +TP);
+
+}
+
+  public static void main(String[] args) {
+
+    int numbers[] = {3,5,8,4,2};
+    pairArray(numbers);
+    
+  }
+}
