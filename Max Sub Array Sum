@@ -1,0 +1,32 @@
+import java.util.*;
+public class MaxsubArraySum {
+ 
+  public static void maxsumsubArray(int numbers[]){
+ int carrSum = 0;
+ int maxsum = Integer.MIN_VALUE;
+
+   for(int i=0;i<numbers.length;i++){
+     for(int j=i;j<numbers.length;j++){
+      carrSum  =0;
+      for(int k=i;k<=j;k++){
+        carrSum = carrSum+numbers[k];
+      }
+      System.out.println(carrSum);
+ if(maxsum<carrSum){
+  maxsum= carrSum;
+ }
+      
+ }
+     
+}
+System.out.println( "Max sum = " + maxsum);
+
+   }
+   
+  
+   public static void main(String[] args) {
+     int numbers[] = {-2,1,-3,4,-1,2,1,-5,4};
+     maxsumsubArray(numbers);
+   }
+  }
+
